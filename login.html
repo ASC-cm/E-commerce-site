@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script src="acton.js"></script>
+    <style>
+        /* General Reset */
+body, h1, h2, p, button, input, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 350px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6a11cb;
+}
+
+/* Input Div */
+.input-div {
+    margin-bottom: 15px;
+}
+
+.input-div label {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-div input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.input-div input:focus {
+    outline: none;
+    border-color: #6a11cb;
+}
+
+/* Password Visibility */
+.input-password {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-password input {
+    flex-grow: 1;
+    padding-right: 35px;
+}
+
+.material-symbols-outlined-open-eyes {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Gender Section */
+.gender-div {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+}
+
+.gender input {
+    margin-right: 5px;
+}
+
+/* Warning */
+.warning p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.warning span {
+    color: #2575fc;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Button */
+.button-div {
+    text-align: center;
+}
+
+button {
+    background: #6a11cb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2575fc;
+}
+
+/* Thank You Section */
+.thank-you-container {
+    display: none;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-container h1 {
+    color: #6a11cb;
+    margin-bottom: 10px;
+}
+
+.thank-you-container p {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: #6a11cb;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <form name="text">
+            <h2>Registration Form</h2>
+            <div class="main">
+                <div class="input-div">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter Name" id="fullname" required>
+                </div>
+                <div class="input-div">
+                    <label>Username</label>
+                    <input type="text" placeholder="Enter Username" id="userName" required>
+                </div>
+                <div class="input-div">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your Email" id="emailId" required>
+                </div>
+                <div class="input-div">
+                    <label>Phone Number</label>
+                    <input type="number" placeholder="Enter Phone Number" id="phoneNum" required>
+                </div>
+                <div class="input-div">
+                    <label>Password</label>
+                    <div class="input-password">
+                    <input type="password" placeholder="Enter your password" id="password" required>
+                        <span class="material-symbols-utlined-open-eyes" onclick="openE()" id="openE">visbility_off</span>
+                    </div>
+                </div>
+                <div class="input-div">
+                    <label>Confirm Password</label>
+                    <input type="text" placeholder="Confirm your password" id="confirmPass" required>
+                </div>
+            </div>
+            <h1>Gender</h1>
+            <div class="gender-div">
+                <div class="gender">
+                    <input type="radio" name="gender">
+                    <label>Male</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender">
+                    <label>Female</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" name="gender">
+                    <label>Other</label>
+                </div>
+            </div>
+            <div class="warning">
+                <p><i>By clicking Sign Up, you agree to our <span>Terms, Privacy Policy</span> and <span>Cookies Policy.</span> You may receive SMS notifications from us and can opt out at any time.</i></p>
+            </div>
+            <div class="button-div">
+                <button onclick="submitForm()" type="button">Register</button>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="thank-you-container" id="thank-you-container">
+        <h1> Thank you for your Registration!</h1>
+        <p> We are excited to have  you on board. Get ready for Exclusive fashon wears and updates. </p>
+        <button class="back-button" onclick="goBack()">Back to Homepage</button>
+    </div>
+
+</body>
+</html>

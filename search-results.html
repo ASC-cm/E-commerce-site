@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 90%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Search Results</h1>
+    <div id="results"></div>
+  </div>
+
+  <script>
+    // Get the search query from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query');
+
+    // Display the search term
+    const resultsContainer = document.getElementById('results');
+    if (query) {
+      resultsContainer.innerHTML = `<p>You searched for: <strong>${query}</strong></p>`;
+    } else {
+      resultsContainer.innerHTML = `<p>No search term provided.</p>`;
+    }
+  </script>
+</body>
+</html>

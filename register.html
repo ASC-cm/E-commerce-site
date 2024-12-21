@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="acton.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-shadow: border-box;
+        }
+        body{
+            font-family: arial,"lato",sans-serif;
+            background-color: azure;
+        }
+        .container{
+            width: 400px;
+            height: 420px;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 5px;
+            box-shadow: 15px 10px 15px;
+        }
+        #user-men{
+            font-size: 2.5rem;
+            margin: 20px 45%;
+            color: rgb(58, 58, 161);
+        }
+        .welcome-heading{
+            font-size: 1.1rem;
+            text-align: center;
+            text-transform: capitalize;
+            color: rgb(91, 129, 241);
+        }
+        .dkp-heading{
+            text-transform: uppercase;
+        }
+        .dtn-container{
+            margin: 40px 30px;
+        }
+        .dtn-container i{
+            margin-right: 8px;
+        }
+        .social-media-login{
+            text-decoration: none;
+            padding: 8px 15px;
+            background-color: #39569c;
+            color: #fff;
+            border-radius: 20px;
+            margin-left: 60px;
+        }
+        .social-media-login1{
+            text-decoration: none;
+            padding: 8px 15px;
+            background-color: #ec5574;
+            color: #fff;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .underline-container{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 42px;
+        }
+        .underline{
+            width: 80px;
+            height: 2px;
+            background-color: rgb(161, 161, 161);
+        }
+        .or-heading{
+            text-align: center;
+            margin-top: -10px;
+            padding: 0px 10px;
+        }
+        .input-box{
+            width: 220px;
+            height: 30px;
+            margin:20px 70px;
+            border-radius: 40px;
+            outline: none;
+            border: none;
+            box-shadow: 10px 10px 13px;
+            padding-left: 10px;
+        }
+        .input-box1{
+            width: 220px;
+            height: 30px;
+            margin: 10px 70px 70px;
+            border-radius: 40px;
+            outline: none;
+            border: none;
+            box-shadow: 10px 10px 13px;
+            padding-left: 10px;
+        }
+        .login-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: -50px;
+            padding: 8px 0px;
+            background-image: linear-gradient(to left, rgb(170, 170, 241), rgb(39, 39, 250));
+            box-shadow: 70px;
+            text-decoration: none;
+            color: #ffffffff;
+            text-transform: capitalize;
+        }
+        .forget-password{
+            position: absolute;
+            margin: 10px 120px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .register{
+            position: absolute;
+            margin-left: 70px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            padding: 10px 20px;
+        }
+        .Register-now{
+            text-decoration: none;
+            margin-left: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i id="user-men" class="fa fa-user-plus" aria-hidden="true"></i>
+        <h2 class="welcome-heading">Welcome to <span class="dkp-heading"></span></span> login</h2>
+        <div class="dtn-container">
+            <a class="social-media-login" href="https://www.facebook.com/login"> <i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
+            <a class="social-media-login1" href="https://www.Google.com/login"> <i class="fa fa-google" aria-hidden="true"></i>Google</a>
+        </div>
+        <div class="underline-container">
+            <div class="underline"></div>
+            <p class="or-heading">or</p>
+            <div class="underline"></div>
+        </div>
+        <div class="input-container">
+            <input class="input-box" type="text" placeholder="username">
+            <input class="input-box1" type="password" placeholder="password">
+            <a class="login-btn" href="index.html">login</a>
+        </div>
+        <a class="forget-password" href="forget.html">forget password?</a>
+        <p class="register">Dont have an account<a class="Register-now" href="login.html">Register now</a></p>
+    </div>
+    
+</body>
+</html>
